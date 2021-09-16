@@ -1,6 +1,7 @@
 from plyer import notification
 import requests
 import json
+import time
 def getData(url):
     r = requests.get(url)
     return r.text
@@ -9,7 +10,7 @@ def notifyMe(title, message):
         title = title,
         message = message,
         app_icon = "C:\\Users\\Aakash Garg\\Desktop\\Github\\Python Projects\\Weather Notificator\\icon.ico",
-        timeout = 10
+        timeout = 5
     )
 
 def location1():
@@ -58,5 +59,8 @@ def location3():
 
 if __name__== '__main__':
     location1()
+    time.sleep(8)
     location2()
+    time.sleep(8)
     location3()
+    time.sleep(5)
